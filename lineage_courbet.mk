@@ -14,6 +14,13 @@ $(call inherit-product, device/xiaomi/courbet/device.mk)
 # Inherit some common Lineage stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    RISING_CHIPSET="Snapdragon 732G" \
+    RISING_MAINTAINER="idkwhatsgoingonmylife"
+
+# Build Vanilla
+RISING_PACKAGE_TYPE := "VANILLA_AOSP"
+
 PRODUCT_NAME := lineage_courbet
 PRODUCT_DEVICE := courbet
 PRODUCT_BRAND := Xiaomi
